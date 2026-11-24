@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(240, 211, 148, 1);
+    font-family: 'Itim', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Topo e Navegação */
+.topo {
+    width: 100%;
+    min-height: 90px;
+    padding: 0.75rem 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: rgba(252, 225, 150, 1);
+}
+
+.esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+}
+
+.direita {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.2rem, 3vw, 2.8rem);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+    transition: transform 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+}
+
+.nav-icon {
+    width: clamp(26px, 2.4vw, 35px);
+    height: auto;
+}
+
+/* Conteúdo Principal da Página Inicial */
+.conteudo-inicio {
+    flex: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 3vw, 3rem) 4%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.8rem, 3.5vw, 3.5rem);
+    align-items: start;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+
+.intro {
+    background-color: rgba(245, 226, 172, 1);
+    width: 100%;
+    padding: clamp(1.5rem, 3vw, 2.6rem) clamp(1.2rem, 2.5vw, 2rem);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+    margin-bottom: 0.6rem;
+}
+
+.intro p {
+    font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+}
+
+.ptext {
+    background-color: rgba(245, 226, 172, 1);
+    width: 100%;
+    padding: clamp(1.2rem, 2.5vw, 2rem);
+    border-radius: 18px;
+}
+
+.ptextcss {
+    font-size: clamp(1.25rem, 2vw, 1.85rem);
+    line-height: 1.35;
+}
+
+.banner-img {
+    width: 100%;
+}
+
+.banner-img img {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+/* Botões de Ação */
+#posicionamento {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.2rem;
+    align-items: center;
+}
+
+/* From Uiverse.io by vinodjangid07 */
+.submitBtn {
+    min-width: 145px;
+    padding: 0.45rem 1.2rem;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: 800;
+    font-size: clamp(1.2rem, 1.7vw, 1.65rem);
+    font-family: 'Itim', sans-serif;
+    cursor: pointer;
+    color: black;
+    background: rgba(255, 220, 122, 1);
+    letter-spacing: 0.7px;
+    transition: transform 0.2s ease;
+}
+
+.submitBtn:hover .arrow {
+    animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.submitBtn:active {
+    transform: scale(0.97);
+}
+
+/* Rodapé e Links das Redes Sociais */
+#rodape {
+    width: 100%;
+    min-height: 4.7rem;
+    padding: 0.8rem 4%;
+    background-color: rgba(252, 225, 150, 1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: auto;
+}
+
+.posicao_rodape {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    max-width: 100%;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 0;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.08);
+}
+
+.social-icon {
+    width: clamp(28px, 2.5vw, 36px);
+    height: auto;
+    display: block;
+}
+
+/* Adaptação para telas médias / notebooks menores */
+@media (max-width: 960px) {
+    .conteudo-inicio {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-img img {
+        max-width: 100%;
+    }
+}
+
+/* Adaptação para janelas muito estreitas */
+@media (max-width: 600px) {
+    .topo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #posicionamento {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .submitBtn {
+        width: 100%;
+    }
+
+    #rodape {
+        justify-content: center;
+    }
+
+    .posicao_rodape {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(240, 211, 148, 1);
+    font-family: 'Itim', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Topo e Navegação */
+.topo {
+    width: 100%;
+    min-height: 90px;
+    padding: 0.75rem 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: rgba(252, 225, 150, 1);
+}
+
+.esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+}
+
+.direita {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.2rem, 3vw, 2.8rem);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+    transition: transform 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+}
+
+.nav-icon {
+    width: clamp(26px, 2.4vw, 35px);
+    height: auto;
+}
+
+/* Conteúdo Principal da Página Contato */
+.conteudo-contato {
+    flex: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 3vw, 3rem) 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(240, 211, 148, 1);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 660px;
+}
+
+.tite {
+    background-color: #F5E2AC;
+    color: #000;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-weight: bold;
+    border-radius: 16px;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #000;
+    font-weight: bold;
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(245, 226, 172, 1);
+    font-family: 'Itim', sans-serif;
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    color: #000;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.acoes-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.25rem;
+}
+
+form button {
+    background-color: #F5E2AC;
+    color: #000;
+    font-family: 'Itim', sans-serif;
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 0.65rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #e6c587;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+/* Rodapé e Links das Redes Sociais */
+#rodape {
+    width: 100%;
+    min-height: 4.7rem;
+    padding: 0.8rem 4%;
+    background-color: rgba(252, 225, 150, 1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: auto;
+}
+
+.posicao_rodape {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    max-width: 100%;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 0;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.08);
+}
+
+.social-icon {
+    width: clamp(28px, 2.5vw, 36px);
+    height: auto;
+    display: block;
+}
+
+/* Adaptação para janelas muito estreitas / mobile */
+@media (max-width: 600px) {
+    .topo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .acoes-form {
+        justify-content: stretch;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    #rodape {
+        justify-content: center;
+    }
+
+    .posicao_rodape {
+        justify-content: center;
+    }
+}
