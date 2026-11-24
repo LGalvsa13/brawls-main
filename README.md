@@ -1,1 +1,1 @@
-# brawls-main
+Portfólio Pessoal (One-Page) — Site desenvolvido com foco em simplicidade, código limpo e navegação fluida. Estruturado em página única com seções de Sobre, Projetos e Contato, aplicando boas práticas de responsividade e semântica web.
